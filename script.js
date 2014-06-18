@@ -7,8 +7,8 @@ var resizeVideo = function(){
 	var iframe_w = parseInt( $( '#iframe' ).css( 'width' ) );
 	var iframe_h = parseInt( $( '#iframe' ).css( 'height' ) );
 
-	if( iframe_w < iframe_h ){
-		$( '#iframe' ).css( { 'height' :  iframe_w * 0.8 } );
+	if( iframe_w * 0.75 < iframe_h ){
+		$( '#iframe' ).css( { 'height' :  iframe_w * 0.75 } );
 		
 	}
 };
