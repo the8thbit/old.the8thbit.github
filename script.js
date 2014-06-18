@@ -9,12 +9,14 @@ var resizeVideo = function(){
 
 	if( iframe_w < iframe_h ){
 		$( '#iframe' ).css( { 'height' :  iframe_w * 0.8 } );
+		
 	}
 };
 
 $( document ).ready( function(){
-	$( '.descript' ).fitText(4.1);
-	$( '.links' ).fitText(3.2);
+	$( '.descript' ).fitText( 4, { minFontSize: '12px' } )
+	$( '.links' ).fitText( 3.2, { minFontSize: '15px' } );
+	
 	resizeVideo();
 	window.onresize = function( event ){ resizeVideo(); }
 })
