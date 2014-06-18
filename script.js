@@ -14,7 +14,7 @@ var resizeVideo = function(){
 };
 
 $( document ).ready( function(){
-	$( '.descript' ).fitText( 4, { minFontSize: '12px' } )
+	$( '.descript' ).fitText( 4, { minFontSize: '11.5px' } )
 	$( '.links' ).fitText( 3.2, { minFontSize: '15px' } );
 	
 	resizeVideo();
