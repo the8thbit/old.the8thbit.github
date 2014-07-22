@@ -1,0 +1,34 @@
+<!--------------------------------
+Creator: Peter Sussman
+License: AGPL v3.0
+================================
+Vote for me!:
+wallet_approve_delegate eightbit
+Or go to:
+btsx://eightbit/approve
+--------------------------------->
+
+<!DOCTYPE html>
+
+<head>
+  <title>Bitshares Forum Linker</title>
+</head>
+
+<body>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> //why the fuck not
+  <script> //in-line script, yes I'm a bad person. I also wrote this using github's web editor, which doesn't have syntax highlighting as far as I can tell, and now this comment is using waaay too many columns. I am literally hitler.
+      document.onready({
+        function getParam(name) {
+          name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+          return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+        var newURL = "btsx://" + getParam("name") + "/" + getParam("action");
+        window.location.href = newURL;
+        window.location.href = document.referrer;
+      });
+  </script>
+</body>
+
+</html>
