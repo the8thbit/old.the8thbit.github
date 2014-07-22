@@ -16,7 +16,7 @@ btsx://eightbit/approve
 
 <body>
   <script> //in-line script, yes I'm a bad person. I also wrote this using github's web editor and now this comment is using waaay too many columns. I am literally hitler.
-      document.onready({
+      document.onready(function(){
         function getParam(name) {
           name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
           var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
