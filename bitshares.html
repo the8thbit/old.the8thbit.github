@@ -15,8 +15,8 @@ btsx://eightbit/approve
 </head>
 
 <body>
-  <script> //in-line script, yes I'm a bad person. I also wrote this using github's web editor and now this comment is using waaay too many columns. I am literally hitler.
-      document.onready(function(){
+  <script> //inline script to give speed of jquery's onReady() function without the cruft of jquery als because I'm lazy
+      (function() {
         function getParam(name) {
           name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
           var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -27,7 +27,7 @@ btsx://eightbit/approve
         alert(newURL);
         window.location.href = newURL;
         window.location.href = document.referrer;
-      });
+      })();
   </script>
 </body>
 
