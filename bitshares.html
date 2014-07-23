@@ -24,7 +24,6 @@ btsx://eightbit/approve
           return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
         var newURL = "btsx://" + getParam("name") + "/" + getParam("action");
-        alert(newURL);
         window.location.href = newURL;
         window.location.href = document.referrer;
       })();
